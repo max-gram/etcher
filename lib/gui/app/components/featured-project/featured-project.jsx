@@ -17,6 +17,7 @@
 'use strict'
 
 const React = require('react')
+const propTypes = require('prop-types')
 const SafeWebview = require('../safe-webview/safe-webview.jsx')
 const settings = require('../../models/settings')
 const analytics = require('../../modules/analytics')
@@ -51,6 +52,10 @@ class FeaturedProject extends React.Component {
       </SafeWebview>
     ) : null
   }
+}
+
+FeaturedProject.propTypes = {
+  onWebviewShow: propTypes.func
 }
 
 module.exports = FeaturedProject
